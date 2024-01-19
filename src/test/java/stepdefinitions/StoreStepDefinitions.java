@@ -6,14 +6,21 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
+import userinterfaces.HomePage;
 
 import java.util.List;
 
 public class StoreStepDefinitions {
+
+    @Managed(driver = "chrome")
+    private WebDriver navegador;
+    private Actor actor = Actor.named("GalesDv");
+    private HomePage homePage = new HomePage();
+
     @Given("^the customer is in the home page$")
     public void theCustomerIsInTheHomePage() {
-        // Write code here that turns the phrase above into concrete actions
-
+        actor.can(BrowseTheWeb.with(navegador));
+        actor.wasAbleTo(Open.browserOn(homePage));
     }
 
     @When("^the customer adds the firts item to the cart$")
