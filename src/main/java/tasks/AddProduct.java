@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static userinterfaces.HomePage.*;
 
 public class AddProduct implements Task {
 
@@ -17,7 +18,7 @@ public class AddProduct implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on() // add to cart
+                Click.on(LINK_FOUND_OBJECT) // add to cart
         );
     }
     public static AddProduct cart(String producto) {

@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import org.openqa.selenium.Keys;
 
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static userinterfaces.HomePage.*;
 
 public class SearchProduct implements Task {
 
@@ -21,10 +21,10 @@ public class SearchProduct implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue(producto).into(), //Put name product
-                Click.on(), //click search
-                Hit.the(Keys.ENTER).into(), //press enter
-                Click.on()//Select the product
+                Enter.theValue(producto).into(INPUT_SEARCH_OBJECT), //Put name product
+                Click.on(BUTTON_SEARCH_OBJECT), //click search
+                Hit.the(Keys.ENTER).into(BUTTON_SEARCH_OBJECT), //press enter
+                Click.on(LINK_FOUND_OBJECT)//Select the product
         );
     }
     public static SearchProduct withNames(String producto) {
