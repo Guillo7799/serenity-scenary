@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 import tasks.AddProduct;
+import tasks.GuestCheckout;
 import tasks.SearchProduct;
 import tasks.SeeCart;
 import userinterfaces.HomePage;
@@ -53,7 +54,9 @@ public class StoreStepDefinitions {
 
     @When("^the customer checkout the cart as a Guest$")
     public void theCustomerCheckoutTheCartAsAGuest() {
-        // Write code here that turns the phrase above into concrete actions
+        actor.attemptsTo(
+                GuestCheckout.selection()
+        );
 
     }
 
