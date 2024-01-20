@@ -8,6 +8,7 @@ import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 import tasks.AddProduct;
 import tasks.SearchProduct;
+import tasks.SeeCart;
 import userinterfaces.HomePage;
 
 import java.util.List;
@@ -42,9 +43,11 @@ public class StoreStepDefinitions {
 
     }
 
-    @Then("^the customer could the shopping cart$")
+    @Then("^the customer could see the shopping cart$")
     public void theCustomerCouldTheShoppingCart() {
-        // Write code here that turns the phrase above into concrete actions
+        actor.attemptsTo(
+                SeeCart.viewCheckout()
+        );
 
     }
 

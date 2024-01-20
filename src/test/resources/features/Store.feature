@@ -8,7 +8,7 @@ Feature: Buy products in store
     Given the customer is in the home page
     When the customer adds Mac to the cart
     And the customer puts Iphone to the cart
-    Then the customer could the shopping cart
+    Then the customer could see the shopping cart
     When  the customer checkout the cart as a Guest
     And the customer completes the formulary with the following information
       | <firstName> | <LastName> | <Email> | <Phone> | <Address> | <City> | <PostCode> | <Country> | <Region> | <Observation> |

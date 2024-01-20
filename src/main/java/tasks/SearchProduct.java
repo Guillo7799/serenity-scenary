@@ -23,7 +23,7 @@ public class SearchProduct implements Task {
         actor.attemptsTo(
                 Enter.theValue(producto).into(INPUT_SEARCH_OBJECT), //Put name product
                 Click.on(BUTTON_SEARCH_OBJECT), //click search
-                Hit.the(Keys.ENTER).into(BUTTON_SEARCH_OBJECT), //press enter
+                //Hit.the(Keys.ENTER).into(BUTTON_SEARCH_OBJECT), //press enter
                 Click.on(LINK_FOUND_OBJECT)//Select the product
         );
     }
