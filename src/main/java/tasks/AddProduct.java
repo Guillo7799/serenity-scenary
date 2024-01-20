@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.actions.Click;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static userinterfaces.HomePage.*;
+import static userinterfaces.CartPage.*;
 
 public class AddProduct implements Task {
 

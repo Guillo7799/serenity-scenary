@@ -15,5 +15,5 @@ Feature: Buy products in store
     Then the customer finish to purchase the order
 
     Examples:
-      | type   | product | firstName | LastName | Email              | Phone      | Address | City  | PostCode | Country | Region    | Observation |
-      | LAPTOP | Iphone  | Guillermo | Azar     | guillermo@azar.com | 9876543211 | valle   | quito | 15746    | ecuador | pichincha | prueba      |
+      | firstName | LastName | Email              | Phone      | Address | City  | PostCode | Country | Region    | Observation |
+      | Guillermo | Azar     | guillermo@azar.com | 9876543211 | valle   | quito | 15746    | ecuador | pichincha | prueba      |
