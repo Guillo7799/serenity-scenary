@@ -6,10 +6,8 @@ Feature: Buy products in store
   @AddItemsToCart
   Scenario Outline: Add items to my cart
     Given the customer is in the home page
-    When the customer adds the firts item to the cart
-      | <type> | <product> |
-    And the customer adds the second item to the cart
-      | <type> | <product> |
+    When the customer adds Mac to the cart
+    And the customer adds Iphone to the cart
     Then the customer could the shopping cart
     When  the customer checkout the cart as a Guest
     And the customer completes the formulary with the following information
