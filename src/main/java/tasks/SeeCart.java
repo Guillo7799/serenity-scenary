@@ -19,7 +19,7 @@ public class SeeCart implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(LINK_PAGE_CART),//Click to see the resume
-                Click.on(CLICK_TO_CHECKOUT) //Click to checkout the purchase
+                Click.on(CLICK_TO_CHECKOUT)//Click to checkout the purchase
         );
 
     }
