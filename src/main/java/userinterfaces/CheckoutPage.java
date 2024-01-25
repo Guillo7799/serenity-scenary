@@ -16,7 +16,8 @@ public class CheckoutPage {
     public static final Target INPUT_THE_ADDRESS = Target.the("Address 1").located(By.xpath("//*[@id=\"input-payment-address-1\"]"));
     public static final Target INPUT_THE_CITY = Target.the("City").located(By.xpath("//*[@id=\"input-payment-city\"]"));
     public static final Target INPUT_THE_POSTCODE = Target.the("Post code").located(By.xpath("//*[@id=\"input-payment-postcode\"]"));
-    public static final Target LINK_PAGE_COUNTRY = Target.the("Country").located(By.xpath("//*[@id=\"input-payment-country\"]"));
-    public static final Target LINK_PAGE_REGION = Target.the("Region").located(By.xpath("//*[@id=\"input-payment-zone\"]"));
+    public static final Target LINK_PAGE_COUNTRY = Target.the("Country").located(By.xpath("/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/div[2]/fieldset/div[6]/select/option[69]"));
+    public static final Target LINK_PAGE_REGION = Target.the("Region").located(By.xpath("/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/div[2]/fieldset/div[7]/select/option[20]"));
+    public static final Target BUTTON_TO_CONTINUE_TWO = Target.the("Button continue two").located(By.xpath("/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[3]/div/input"));
 
 }

@@ -21,10 +21,11 @@ public class SearchProduct implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                //Click.on(INPUT_SEARCH_OBJECT),//Click in input
                 Enter.theValue(producto).into(INPUT_SEARCH_OBJECT), //Put name product
-                Click.on(BUTTON_SEARCH_OBJECT), //click search
+                Click.on(BUTTON_SEARCH_OBJECT)//, //click search
                 //Hit.the(Keys.ENTER).into(BUTTON_SEARCH_OBJECT), //press enter
-                Click.on(LINK_FOUND_OBJECT)//Select the product
+                //Click.on(LINK_FOUND_OBJECT)//Select the product
         );
     }
     public static SearchProduct withNames(String producto) {

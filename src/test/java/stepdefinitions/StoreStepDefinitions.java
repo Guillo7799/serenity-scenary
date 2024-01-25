@@ -6,10 +6,7 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
-import tasks.AddProduct;
-import tasks.GuestCheckout;
-import tasks.SearchProduct;
-import tasks.SeeCart;
+import tasks.*;
 import userinterfaces.HomePage;
 
 import java.util.List;
@@ -60,15 +57,12 @@ public class StoreStepDefinitions {
 
     }
 
-    @When("^the customer completes the formulary with the following information$")
-    public void theCustomerCompletesTheFormularyWithTheFollowingInformation(List<String> Data) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-        // E,K,V must be a scalar (String, Integer, Date, enum etc).
-        // Field names for YourType must match the column names in
-        // your feature file (except for spaces and capitalization).
-
+    @When("^the customer completes the formulary with these data (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*), in the form$")
+    public void theCustomerCompletesTheFormularyWithTheFollowingInformation(String name, String lastname, String email, String phone, String address, String city, String code, String observation ) {
+        actor.attemptsTo(
+                CompleteForm.addInfo(name,lastname,email,phone,address,city,code,observation),
+                DeliveryDetails.writeObservation(observation)
+        );
     }
 
     @Then("^the customer finish to purchase the order$")
